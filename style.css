@@ -1,0 +1,109 @@
+/* global starts  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* global ends  */
+
+    /* body starts  */
+    body{
+        background: #f6f7fb;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    /* body ends  */
+
+        /* container starts  */
+        .container{
+            text-align: center;
+        }
+        /* container ends  */
+            
+            /* progress-container starts  */
+            .progress-container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                margin-bottom: 30px;
+                max-width: 100%;
+                width: 350px;
+            }
+            /* progress-container ends  */
+
+                /* progress starts for lines  */
+                .progress{
+                    background-color: #3498db;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 4px;
+                    width: 0%;
+                    transform: translateY(-50%);
+                    z-index: -1;
+                    transition: 0.4s ease;
+                }
+                /* progress ends for lines  */
+
+            /* progress container before starts  */
+            .progress-container::before{
+                content: "";
+                background: #e0e0e0;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 4px;
+                width: 100%;
+                transform: translateY(-50%);
+                z-index: -1;
+            }
+            /* progress container before ends  */
+
+                    /* circle starts  */
+                    .circle{
+                        background: #fff;
+                        color: #999;
+                        border-radius: 50%;
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 3px solid #e0e0e0;
+                        transition: .4s ease;
+
+                    }
+                    /* circle ends  */
+
+                        /* active class starts  */
+                        .active{
+                            border-color: #3498db;
+                        }
+                        /* active class ends  */
+
+                .btn {
+                    background:#3498db;
+                    color: #fff;
+                    border: none;
+                    border-radius: 6px;
+                    padding: 8px 30px;
+                    margin: 5px;
+                    font-size: 14px;
+                }
+
+                    .btn:active{
+                        transform: scale(0.98);
+                    }
+                        .btn:focus{
+                            outline:none;
+                        }
+                .btn:disabled {
+                    background-color: #e0e0e0;
+                    cursor: not-allowed;
+                }
